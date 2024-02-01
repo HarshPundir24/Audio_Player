@@ -11,7 +11,7 @@ const Playlist = ({ files, onSelect }) => {
     <ul>
       <h2>Playlist</h2>
       {playlistFiles.map((file, index) => (
-        <li key={index} onClick={() => onSelect(index)}>
+        <li role="button" key={index} onClick={() => onSelect(index)}>
           {file.name}
         </li>
       ))}

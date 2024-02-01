@@ -69,14 +69,16 @@ const App = () => {
 
   return (
     <div className="App mb-5">
-      <h3 className='text-center'>Audio Playing</h3>
-      <FileInput onFileChange={handleFileChange} />
-      <button onClick={handleFileUpload}>Upload Audio</button>
-      <div className='d-flex justify-content-between my-5'>
+      <h1 className='text-center bg-dark text-white'>Audio Player</h1>
+      <div className='d-flex justify-content-start my-5'>
+        <FileInput onFileChange={handleFileChange} />
+        <button className='btn btn-success mt-2 mt-md-0 ml-md-2' onClick={handleFileUpload}>Upload Audio</button>
+      </div>
+      <div className='d-flex justify-content-around flex-column-reverse flex-md-row my-5'>
         <Playlist files={audioFiles} onSelect={handleSelectFile} />
         {audioFiles.length > 0 && (
-          <AudioPlayer src={audioFiles[currentFileIndex].url} 
-           onEnded={handleAudioEnded} songName={audioFiles[currentFileIndex].name}/>
+          <AudioPlayer  src={audioFiles[currentFileIndex].url}
+            onEnded={handleAudioEnded} songName={audioFiles[currentFileIndex].name} />
         )}
       </div>
     </div>
