@@ -12,7 +12,6 @@ const App = () => {
   useEffect(() => {
     const storedFiles = JSON.parse(localStorage.getItem('audioFiles')) || [];
     setAudioFiles(storedFiles);
-
     const lastPlayedIndex = parseInt(localStorage.getItem('lastPlayedIndex')) || 0;
     setCurrentFileIndex(lastPlayedIndex);
 
@@ -26,7 +25,6 @@ const App = () => {
     }
   }, [audioFiles, currentFileIndex,loading]);
 
-  // Handle file upload and integrate with Cloudinary
   const handleFileUpload = async () => {
   if (audioUpload === '') return;
 
@@ -49,7 +47,7 @@ const App = () => {
         { name: audioUpload.name, url: responseData.url },
       ];
       setAudioFiles(updatedFiles);
-      setAudioUpload(''); // Reset the upload state
+      setAudioUpload('');
     } else {
       console.error("Failed to upload to Cloudinary");
     }
