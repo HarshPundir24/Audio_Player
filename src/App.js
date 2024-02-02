@@ -101,7 +101,7 @@ const App = () => {
       </div>
       <div className="d-flex justify-content-around flex-column-reverse flex-md-row my-5">
         <Playlist files={audioFiles} onSelect={handleSelectFile} onRemove={removeAudioFile} />
-        {audioFiles.length > 0 && (
+        {audioFiles.length > 0 && currentFileIndex < audioFiles.length && (
           <AudioPlayer
             src={audioFiles[currentFileIndex].url}
             onEnded={handleAudioEnded}
