@@ -1,4 +1,4 @@
-<strong>To access the site's interface and explore its features, kindly follow this link: https://audio-player-eight-phi.vercel.app/</strong>
+<strong>To access the site's interface and explore its features, kindly follow this link: https://audio-player-git-main-harsh-pundirs-projects.vercel.app/</strong>
 
 <strong>Description:</strong>
 It is a React application for an audio player with features such as file upload, playlist management, and audio playback. It utilizes components like AudioPlayer, Playlist, FileInput, and LoadingBar to create a user-friendly audio playback experience.
